@@ -7,9 +7,10 @@
 
   <Targets>
     <Target>
-      <TargetName>Target 1</TargetName>
+      <TargetName>stm32f417</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F417VG</Device>
@@ -46,14 +47,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\</OutputDirectory>
+          <OutputDirectory>.\Objects\</OutputDirectory>
           <OutputName>gpshotstart</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\</ListingPath>
+          <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -172,12 +173,12 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <Capability>1</Capability>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -353,7 +354,7 @@
             <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
-            <OneElfS>1</OneElfS>
+            <OneElfS>0</OneElfS>
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
@@ -370,9 +371,9 @@
             <vShortWch>0</vShortWch>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>inline=__inline,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Libraries\STM32F4xx_StdPeriph_Driver\inc;.\Libraries\CMSIS\Include;.\Libraries;.\inc;.\Libraries\mbed\api;.\Libraries\mbed\hal;.\Libraries\mbed\targets\hal\TARGET_STM\TARGET_STM32F4XX;.\Libraries\mbed\targets\cmsis\TARGET_STM\TARGET_STM32F4XX</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,7 +414,134 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>main</GroupName>
+          <Files>
+            <File>
+              <FileName>main.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\src\main.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ubloxOp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\src\ubloxOp.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>startup</GroupName>
+          <Files>
+            <File>
+              <FileName>startup_stm32f40xx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\startup\startup_stm32f40xx.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>system</GroupName>
+          <Files>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>periferals</GroupName>
+          <Files>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>mbed</GroupName>
+          <Files>
+            <File>
+              <FileName>assert.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\common\assert.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\common\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\common\board.c</FilePath>
+            </File>
+            <File>
+              <FileName>error.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\common\error.c</FilePath>
+            </File>
+            <File>
+              <FileName>pinmap_common.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\common\pinmap_common.c</FilePath>
+            </File>
+            <File>
+              <FileName>us_ticker_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\common\us_ticker_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>wait_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\common\wait_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>Serial.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Libraries\mbed\common\Serial.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>cmsis_nvic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\targets\cmsis\TARGET_STM\TARGET_STM32F4XX\cmsis_nvic.c</FilePath>
+            </File>
+            <File>
+              <FileName>us_ticker.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\targets\hal\TARGET_STM\TARGET_STM32F4XX\us_ticker.c</FilePath>
+            </File>
+            <File>
+              <FileName>pinmap.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\targets\hal\TARGET_STM\TARGET_STM32F4XX\pinmap.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\targets\hal\TARGET_STM\TARGET_STM32F4XX\gpio_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>SerialBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Libraries\mbed\common\SerialBase.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

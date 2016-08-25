@@ -1,14 +1,28 @@
 #include "stm32f4xx.h"
-#include "AdisRecv.h"
-#include "Config.h"
+#include "mbed.h"
+#include "ubloxOp.h"
 #include "main.h"
+
+
+Serial pc(PA_9,PA_10);
 
 int main(void){
 	SystemInit();
-	init();
-	//Config_NVIC();
+	
 	while(1) 
 	{
-		 adisRecieve();
+		 
 	}
+}
+
+
+// tx, rx
+//Serial pc(PA_9, PA_10); 
+
+int getinfo() {
+	
+    pc.printf("Hello World!\n");
+    while(1) {
+        pc.putc(pc.getc() + 1);
+    }
 }

@@ -1,0 +1,25 @@
+--cpu Cortex-M4.fp
+".\objects\main.o"
+".\objects\config.o"
+".\objects\startup_stm32f40xx.o"
+".\objects\system_stm32f4xx.o"
+".\objects\misc.o"
+".\objects\stm32f4xx_gpio.o"
+".\objects\stm32f4xx_usart.o"
+".\objects\stm32f4xx_rcc.o"
+".\objects\assert.o"
+".\objects\gpio.o"
+".\objects\board.o"
+".\objects\error.o"
+".\objects\pinmap_common.o"
+".\objects\us_ticker_api.o"
+".\objects\wait_api.o"
+".\objects\serial.o"
+".\objects\cmsis_nvic.o"
+".\objects\us_ticker.o"
+".\objects\pinmap.o"
+".\objects\gpio_api.o"
+--strict --scatter ".\Objects\gpshotstart.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\gpshotstart.map" -o .\Objects\gpshotstart.axf
