@@ -371,7 +371,7 @@
             <vShortWch>0</vShortWch>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>inline=__inline,USE_STDPERIPH_DRIVER</Define>
+              <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>.\Libraries\STM32F4xx_StdPeriph_Driver\inc;.\Libraries\CMSIS\Include;.\Libraries;.\inc;.\Libraries\mbed\api;.\Libraries\mbed\hal;.\Libraries\mbed\targets\hal\TARGET_STM\TARGET_STM32F4XX;.\Libraries\mbed\targets\cmsis\TARGET_STM\TARGET_STM32F4XX</IncludePath>
             </VariousControls>
@@ -540,6 +540,21 @@
               <FileName>SerialBase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Libraries\mbed\common\SerialBase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>RawSerial.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Libraries\mbed\common\RawSerial.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Stream.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Libraries\mbed\common\Stream.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_interface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\mbed\common\mbed_interface.c</FilePath>
             </File>
           </Files>
         </Group>
