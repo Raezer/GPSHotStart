@@ -28,6 +28,15 @@
 .\objects\rawserial.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\rawserial.o: C:\Keil\ARM\ARMCC\Bin\..\include\cstring
 .\objects\rawserial.o: C:\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\rawserial.o: .\Libraries\mbed\api\SerialBase.h
+.\objects\rawserial.o: .\Libraries\mbed\api\Stream.h
+.\objects\rawserial.o: .\Libraries\mbed\api\FileLike.h
+.\objects\rawserial.o: .\Libraries\mbed\api\FileBase.h
+.\objects\rawserial.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\rawserial.o: .\Libraries\mbed\api\FileHandle.h
+.\objects\rawserial.o: .\Libraries\mbed\api\FunctionPointer.h
+.\objects\rawserial.o: C:\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\rawserial.o: .\Libraries\mbed\hal\serial_api.h
 .\objects\rawserial.o: .\Libraries\mbed\api\wait_api.h
 .\objects\rawserial.o: C:\Keil\ARM\ARMCC\Bin\..\include\cstdarg
 .\objects\rawserial.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdarg.h

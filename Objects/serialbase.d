@@ -28,4 +28,12 @@
 .\objects\serialbase.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\serialbase.o: C:\Keil\ARM\ARMCC\Bin\..\include\cstring
 .\objects\serialbase.o: C:\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\serialbase.o: .\Libraries\mbed\api\Stream.h
+.\objects\serialbase.o: .\Libraries\mbed\api\FileLike.h
+.\objects\serialbase.o: .\Libraries\mbed\api\FileBase.h
+.\objects\serialbase.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\serialbase.o: .\Libraries\mbed\api\FileHandle.h
+.\objects\serialbase.o: .\Libraries\mbed\api\FunctionPointer.h
+.\objects\serialbase.o: C:\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\serialbase.o: .\Libraries\mbed\hal\serial_api.h
 .\objects\serialbase.o: .\Libraries\mbed\api\wait_api.h

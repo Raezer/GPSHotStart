@@ -28,4 +28,13 @@
 .\objects\serial.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\serial.o: C:\Keil\ARM\ARMCC\Bin\..\include\cstring
 .\objects\serial.o: C:\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\serial.o: .\Libraries\mbed\api\Stream.h
+.\objects\serial.o: .\Libraries\mbed\api\FileLike.h
+.\objects\serial.o: .\Libraries\mbed\api\FileBase.h
+.\objects\serial.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\serial.o: .\Libraries\mbed\api\FileHandle.h
+.\objects\serial.o: .\Libraries\mbed\api\SerialBase.h
+.\objects\serial.o: .\Libraries\mbed\api\FunctionPointer.h
+.\objects\serial.o: C:\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\serial.o: .\Libraries\mbed\hal\serial_api.h
 .\objects\serial.o: .\Libraries\mbed\api\wait_api.h

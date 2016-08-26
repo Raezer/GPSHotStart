@@ -84,10 +84,12 @@ FileHandle::~FileHandle() {
 extern int stdio_uart_inited;
 extern serial_t stdio_uart;
 #endif
-
+	#define STDIO_UART_TX  PA_9
+	#define STDIO_UART_RX  PA_10
 static void init_serial() {
 #if DEVICE_SERIAL
     if (stdio_uart_inited) return;
+
     serial_init(&stdio_uart, STDIO_UART_TX, STDIO_UART_RX);
 #endif
 }
